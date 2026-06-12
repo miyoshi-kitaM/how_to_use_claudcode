@@ -2,248 +2,350 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Claude完全ガイド サマリー</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude活用ガイド | 業務効率化からWeb公開まで</title>
+
 <style>
 body{
-    font-family: "Yu Gothic", sans-serif;
-    line-height:1.8;
-    max-width:1000px;
-    margin:40px auto;
-    padding:0 20px;
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;
     color:#333;
+    line-height:1.8;
+    background:#fafafa;
 }
-h1,h2,h3{
-    color:#1a1a1a;
+
+header{
+    padding:80px 30px;
+    background:#fff;
+    text-align:center;
+    border-bottom:1px solid #eee;
 }
-section{
-    margin-bottom:40px;
+
+h1{
+    font-size:42px;
+    margin-bottom:20px;
 }
-.summary-box{
-    background:#f5f7fa;
+
+h2{
+    margin-top:80px;
+    border-bottom:2px solid #ddd;
+    padding-bottom:10px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+    background:#fff;
+}
+
+.card{
+    background:#f7f7f7;
+    padding:25px;
+    border-radius:12px;
+    margin:20px 0;
+}
+
+.step{
+    background:#f9f9f9;
     padding:20px;
-    border-left:5px solid #4a90e2;
+    margin:15px 0;
+    border-left:4px solid #333;
 }
+
+code{
+    background:#eee;
+    padding:2px 6px;
+}
+
+pre{
+    background:#222;
+    color:white;
+    padding:20px;
+    overflow:auto;
+    border-radius:10px;
+}
+
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:20px;
 }
+
 th,td{
     border:1px solid #ddd;
-    padding:10px;
+    padding:12px;
 }
+
 th{
-    background:#f0f0f0;
+    background:#f5f5f5;
+}
+
+.footer{
+    margin-top:80px;
+    padding:40px;
+    text-align:center;
+    color:#777;
 }
 </style>
 </head>
+
 <body>
 
-<h1>Claude完全ガイド 要約</h1>
+<header>
+<h1>Claude活用ガイド</h1>
+<p>
+AIを活用して業務効率化し、Webページとして公開するまでの手順
+</p>
+</header>
 
-<div class="summary-box">
+<div class="container">
+
+<h2>1. Claudeとは？</h2>
+
+<div class="card">
 <p>
-本記事は、Anthropic社のAI「Claude」の全体像を整理し、
-Web版Claude、Claude Cowork、Claude Codeの3つの主要プロダクトと、
-それらを拡張する機能について解説したものである。
+Claudeは文章作成、要約、分析、企画書作成を得意とするAIです。
 </p>
+
 <p>
-2026年現在、AIは単なるチャットツールから、
-実際にPCやブラウザを操作して業務を代行する
-「AIエージェント」へ進化している。
+まずは以下のような業務から始めるのがおすすめです。
 </p>
+
+<ul>
+<li>メール作成</li>
+<li>議事録作成</li>
+<li>SNS投稿作成</li>
+<li>レポート要約</li>
+<li>企画書作成</li>
+</ul>
 </div>
 
-<section>
-<h2>1. Claudeファミリーの全体像</h2>
-
-<table>
-<tr>
-<th>プロダクト</th>
-<th>用途</th>
-</tr>
-<tr>
-<td>Claude</td>
-<td>文章作成・調査・分析・アイデア出し</td>
-</tr>
-<tr>
-<td>Claude Cowork</td>
-<td>PC上のファイル操作や資料作成の自動化</td>
-</tr>
-<tr>
-<td>Claude Code</td>
-<td>アプリ開発や業務ツール開発の自動化</td>
-</tr>
-</table>
-
-<p>
-Claudeは「相談相手」、
-Coworkは「PC上の優秀な部下」、
-Codeは「AI開発チーム」と位置付けられる。
-</p>
-</section>
-
-<section>
-<h2>2. Claude（Web版）</h2>
-
-<h3>主な特徴</h3>
-<ul>
-<li>自然な日本語生成</li>
-<li>長文・PDFの要約</li>
-<li>ファイル作成（Word、Excel等）</li>
-<li>Web検索・ディープリサーチ</li>
-</ul>
-
-<h3>Project</h3>
-<p>
-特定業務専用のClaudeを作成できる機能。
-記事制作やマーケティング分析など、
-用途ごとの専属AIを構築できる。
-</p>
-
-<h3>Artifacts</h3>
-<p>
-WebアプリやHTMLなどをプレビュー付きで生成できる機能。
-非エンジニアでも簡単なツール開発が可能。
-</p>
-
-<h3>Claude in Chrome</h3>
-<p>
-ブラウザをClaudeが直接操作する機能。
-競合調査や定型的なWeb作業を自動化できる。
-</p>
-</section>
-
-<section>
-<h2>3. Claude Cowork</h2>
-
-<h3>特徴</h3>
-<ul>
-<li>ローカルファイルを直接操作</li>
-<li>フォルダ整理</li>
-<li>議事録作成</li>
-<li>資料生成</li>
-<li>ファイル分類・リネーム</li>
-</ul>
-
-<p>
-従来のAIが「提案」までだったのに対し、
-Coworkは実際に成果物を作成する。
-</p>
-
-<h3>Skills（スキル）</h3>
-<p>
-業務手順を記憶させる機能。
-議事録作成、メール返信、SNS添削などを
-定型化できる。
-</p>
-
-<h3>MCP</h3>
-<p>
-Google Drive、Slack、Notionなどの
-外部サービスと接続する仕組み。
-AI版USB-Cとも表現されている。
-</p>
-
-<h3>Dispatch</h3>
-<p>
-スマホからCoworkへ遠隔指示を出す機能。
-外出先からPC上の作業を開始できる。
-</p>
-</section>
-
-<section>
-<h2>4. Claude Code</h2>
-
-<h3>特徴</h3>
-<p>
-プログラミング未経験者でも
-自然言語だけでアプリ開発が可能。
-</p>
-
-<h3>活用例</h3>
-<ul>
-<li>営業向け商談準備自動化</li>
-<li>会計処理自動化</li>
-<li>広報・PR業務の自動化</li>
-<li>スライド作成自動化</li>
-<li>社内ツール開発</li>
-</ul>
-
-<p>
-従来は外注していたシステム開発を、
-自社で迅速かつ低コストに実施できる。
-</p>
-
-<h3>Remote Control</h3>
-<p>
-スマホや別PCからClaude Codeを操作。
-開発作業を遠隔で監視・指示できる。
-</p>
-
-<h3>Channels</h3>
-<p>
-TelegramやDiscordなどから
-Claude Codeへ直接指示できる。
-</p>
-</section>
-
-<section>
-<h2>5. 使い分けガイド</h2>
+<h2>2. Claudeで業務効率化する</h2>
 
 <table>
 <tr>
 <th>業務</th>
-<th>推奨ツール</th>
+<th>従来</th>
+<th>Claude活用後</th>
 </tr>
+
 <tr>
-<td>文章作成</td>
-<td>Claude</td>
+<td>議事録作成</td>
+<td>60分</td>
+<td>10分</td>
 </tr>
+
 <tr>
-<td>競合調査</td>
-<td>Claude in Chrome</td>
+<td>SNS投稿作成</td>
+<td>30分</td>
+<td>5分</td>
 </tr>
+
 <tr>
-<td>フォルダ整理</td>
-<td>Claude Cowork</td>
+<td>企画書作成</td>
+<td>3時間</td>
+<td>30分</td>
 </tr>
+
 <tr>
-<td>議事録→資料化</td>
-<td>Claude Cowork</td>
+<td>レポート作成</td>
+<td>2時間</td>
+<td>15分</td>
 </tr>
-<tr>
-<td>社内ツール開発</td>
-<td>Claude Code</td>
-</tr>
-<tr>
-<td>外出先から指示</td>
-<td>Dispatch / Remote Control</td>
-</tr>
+
 </table>
-</section>
 
-<section>
-<h2>6. 結論</h2>
+<h2>3. Claude Codeとは？</h2>
 
+<div class="card">
 <p>
-AI活用は「質問する時代」から
-「仕事を任せる時代」へ移行している。
+Claude CodeはAIエンジニアです。
 </p>
 
 <p>
-Claudeシリーズを活用することで、
-情報収集、資料作成、業務自動化、
-アプリ開発までをAIへ委任できる。
+自然言語で指示するだけで、
+Webサイトやダッシュボードを作成できます。
+</p>
+</div>
+
+<h3>指示例</h3>
+
+<pre>
+観光マーケティングダッシュボードを作成してください。
+
+条件
+
+・スマホ対応
+・観光客数グラフ
+・宿泊者数グラフ
+・Instagram分析
+・GA4分析
+</pre>
+
+<h2>4. GitHubとは？</h2>
+
+<div class="card">
+<p>
+GitHubは作成したファイルを保存・管理するサービスです。
 </p>
 
 <p>
-人間は単純作業から解放され、
-判断・企画・顧客対応など
-本来価値を生む業務へ集中できるようになる。
+Wordの保存先がOneDriveなら、
+プログラムの保存先がGitHubだと考えてください。
+</p>
+</div>
+
+<h2>5. GitHub Pagesで公開する</h2>
+
+<h3>STEP1 リポジトリ作成</h3>
+
+<div class="step">
+GitHubへログインし「New Repository」を作成
+</div>
+
+<h3>STEP2 index.html作成</h3>
+
+<div class="step">
+Add file → Create new file
+</div>
+
+<div class="step">
+ファイル名を
+<code>index.html</code>
+にする
+</div>
+
+<div class="step">
+Claudeが生成したHTMLを貼り付ける
+</div>
+
+<h3>STEP3 保存</h3>
+
+<div class="step">
+Commit changes
+</div>
+
+<h3>STEP4 GitHub Pages設定</h3>
+
+<div class="step">
+Settings → Pages
+</div>
+
+<div class="step">
+Source
+
+↓
+
+Deploy from a branch
+</div>
+
+<div class="step">
+Branch
+
+↓
+
+main
+</div>
+
+<div class="step">
+Folder
+
+↓
+
+/(root)
+</div>
+
+<div class="step">
+Save
+</div>
+
+<h3>STEP5 完成</h3>
+
+<div class="card">
+<p>
+数分後に以下のようなURLが発行されます。
 </p>
 
-</section>
+<pre>
+https://ユーザー名.github.io/リポジトリ名/
+</pre>
+
+<p>
+このURLを共有するだけで、
+誰でもページを見ることができます。
+</p>
+</div>
+
+<h2>6. おすすめ活用例</h2>
+
+<ul>
+<li>業務マニュアル</li>
+<li>イベント運営マニュアル</li>
+<li>観光案内サイト</li>
+<li>月次レポート共有</li>
+<li>観光ダッシュボード</li>
+<li>社内ナレッジ共有</li>
+</ul>
+
+<h2>7. 学習ロードマップ</h2>
+
+<table>
+<tr>
+<th>レベル</th>
+<th>内容</th>
+</tr>
+
+<tr>
+<td>初級</td>
+<td>Claudeで文章作成</td>
+</tr>
+
+<tr>
+<td>中級</td>
+<td>資料作成・分析</td>
+</tr>
+
+<tr>
+<td>中上級</td>
+<td>Claude Codeでサイト作成</td>
+</tr>
+
+<tr>
+<td>上級</td>
+<td>GitHub Pages公開</td>
+</tr>
+
+<tr>
+<td>実務活用</td>
+<td>業務自動化・ダッシュボード構築</td>
+</tr>
+
+</table>
+
+<h2>まとめ</h2>
+
+<div class="card">
+<p>
+AI活用の目的はAIを使うことではありません。
+</p>
+
+<p>
+単純作業を減らし、
+人が企画・判断・コミュニケーションに集中することです。
+</p>
+
+<p>
+まずはClaudeで文章作成や資料作成から始め、
+次にClaude Codeで業務ツールを作り、
+GitHub Pagesで公開してみましょう。
+</p>
+</div>
+
+</div>
+
+<div class="footer">
+Claude × GitHub Pages 活用ガイド
+</div>
 
 </body>
 </html>
